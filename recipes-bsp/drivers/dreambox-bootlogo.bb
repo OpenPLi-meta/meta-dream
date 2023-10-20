@@ -4,7 +4,7 @@ PV = "1.3"
 
 BINARY_VERSION = "1.3"
 
-SRC_URI = "http://dreamboxupdate.com/download/opendreambox/2.0.0/dreambox-bootlogo/dreambox-bootlogo_${BINARY_VERSION}_${MACHINE}.tar.bz2"
+SRC_URI = "file://dreambox-bootlogo_1.3_dm8000.tar.bz2"
 
 SRC_URI[md5sum] = "1b63ac7e2bd5c0db0748606acc310d47"
 SRC_URI[sha256sum] = "91e4402190fe88cf394ae780141d968a1ebecd8db7b23c1f0ca3f4bfa9c9512a"
