@@ -102,9 +102,6 @@ CMDLINE_UBI = "ubi.mtd=root root=ubi0:rootfs rootfstype=ubifs rw ${CMDLINE_CONSO
 CMDLINE = "${CMDLINE_UBI}"
 USB_CMDLINE = "root=${USB_ROOT} rootdelay=10 rw ${CMDLINE_CONSOLE}"
 
-LOCALVERSION = "-${MACHINE}"
-
-
 do_configure:prepend() {
 
         echo "" > ${S}/.config
@@ -119,9 +116,9 @@ do_configure:prepend() {
             -e '/CONFIG_LOGO_LINUX_CLUT224=/d' \
             -e '/CONFIG_LOCALVERSION/d' \
             -e '/CONFIG_LOCALVERSION_AUTO/d' \
-	    < '${WORKDIR}/defconfig' >>'${S}/.config'
+        < '${WORKDIR}/defconfig' >>'${S}/.config'
 
-        echo 'CONFIG_LOCALVERSION="${LOCALVERSION}"' >>${S}/.config
+        echo 'CONFIG_LOCALVERSION="-${MACHINE}"' >>${S}/.config
         echo '# CONFIG_LOCALVERSION_AUTO is not set' >>${S}/.config
 
 }
