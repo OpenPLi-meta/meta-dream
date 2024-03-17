@@ -12,7 +12,7 @@ PACKAGES_DYNAMIC = "kernel-*"
 # the kernel here, so that it is known that the kernel has them built in.
 KERNEL_BUILTIN_MODULES = "kernel-module-block2mtd"
 
-KERNEL_BUILTIN_MODULES_dm8000 = "\
+KERNEL_BUILTIN_MODULES:dm8000 = "\
 	kernel-module-aes-generic \
 	kernel-module-block2mtd \
 	kernel-module-crc32c \
